@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get a FREE Roofing Estimate from a Contractor Near your Location</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Skip to main content -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <a href="#footer" class="skip-link">Skip to footer</a>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <p>Speak with a Contractor: <a href="tel:18445862465" class="phone-link">1-844-586-2465</a></p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="https://homezies.com/wp-content/uploads/2025/05/logo-v2.webp" alt="Homezies Logo" class="logo-img">
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#main-content">Home</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#articles">Articles</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-wrapper">
+                    <div class="hero-left">
+                        <h2 class="hero-subtitle">We're Here To Help!</h2>
+                        <h1 class="hero-title">QUALITY ROOFING REMODEL QUOTES</h1>
+                        <h2 class="hero-main-title">Get a FREE Roofing Estimate from a Contractor Near your Location</h2>
+                        <h3 class="hero-subheading">Speak With a Roofing Contractor Today!!</h3>
+                        
+                        <div class="features">
+                            <div class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                <span>Search Local Dealers</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                <span>Review Top Brands</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                <span>Compare Multiple Quotes</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                <span>Find The Best Deals</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-right">
+                        <!-- Mobile Click to Call Section -->
+                        <div class="mobile-call-section">
+                            <div class="call-header">
+                                <h3 class="call-title">Get Your FREE Roofing Estimate</h3>
+                                <p class="call-subtitle">Speak with a Contractor Today!</p>
+                            </div>
+                            
+                            <div class="call-content">
+                                <div class="call-features">
+                                    <div class="call-feature-item">
+                                        <span class="call-icon">✓</span>
+                                        <span>No dates required today</span>
+                                    </div>
+                                    <div class="call-feature-item">
+                                        <span class="call-icon">✓</span>
+                                        <span>Get quotes anytime</span>
+                                    </div>
+                                    <div class="call-feature-item">
+                                        <span class="call-icon">✓</span>
+                                        <span>Connect with local pros</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="call-button-wrapper">
+                                    <a href="tel:18445862465" class="call-button">
+                                        <span class="call-button-icon">📞</span>
+                                        <span class="call-button-text">Call Now</span>
+                                        <span class="call-button-phone">1-844-586-2465</span>
+                                    </a>
+                                    <p class="call-note">Call within business hours<br><strong>Mon–Fri, 8 AM – 7 PM EST</strong></p>
+                                </div>
+                                
+                                <div class="call-benefits">
+                                    <h4>What You'll Get:</h4>
+                                    <ul>
+                                        <li>Free estimates from local contractors</li>
+                                        <li>Compare multiple quotes</li>
+                                        <li>Expert advice and recommendations</li>
+                                        <li>No obligation, completely free</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Desktop Form Section -->
+                        <div class="form-section desktop-form">
+                            <h3 class="form-title">Need a New Roof? Connect with Expert Installers</h3>
+                            
+                            <!-- Progress Bar -->
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="progressFill" style="width: 0%;"></div>
+                                </div>
+                                <div class="progress-text">
+                                    <span id="progressPercent">0%</span>
+                                </div>
+                            </div>
+
+                            <form id="quote-form" class="quote-form">
+                                <!-- Step 1: Zip Code -->
+                                <div class="form-step active" id="step1">
+                                    <h2 class="step-title">What is your Zip Code?</h2>
+                                    <label for="zipcode">What is your Zip Code?</label>
+                                    <div class="form-group">
+                                        <input 
+                                            type="text" 
+                                            id="zipcode" 
+                                            name="zipcode" 
+                                            placeholder="Enter your zip code" 
+                                            pattern="[0-9]{5}" 
+                                            maxlength="5"
+                                            required
+                                        >
+                                    </div>
+                                    <button type="button" class="btn-primary" onclick="nextStep(1)">Next <span class="arrow-icon">→</span></button>
+                                    <p class="form-note">Why do we ask?<br>Your zip code is used to find the best available professionals in your area.</p>
+                                </div>
+
+                                <!-- Step 2: Project Type -->
+                                <div class="form-step" id="step2">
+                                    <h2 class="step-title">What type of Roofing project do you need?</h2>
+                                    <div class="option-grid">
+                                        <div class="option-card" onclick="selectOption('projectType', 'replace-install')">
+                                            <div class="option-icon">
+                                                <img src="https://homezies.com/wp-content/uploads/2025/11/Replace-install-1.png" alt="Replace / Install">
+                                            </div>
+                                            <div class="option-label">Replace / Install</div>
+                                            <input type="radio" name="projectType" value="replace-install" id="projectType-replace-install" required>
+                                        </div>
+                                        <div class="option-card" onclick="selectOption('projectType', 'repair')">
+                                            <div class="option-icon">
+                                                <img src="https://homezies.com/wp-content/uploads/2025/11/repair-1.png" alt="Repair">
+                                            </div>
+                                            <div class="option-label">Repair</div>
+                                            <input type="radio" name="projectType" value="repair" id="projectType-repair" required>
+                                        </div>
+                                    </div>
+                                    <div class="step-navigation">
+                                        <button type="button" class="btn-secondary" onclick="prevStep(2)">Back</button>
+                                        <button type="button" class="btn-primary" onclick="nextStep(2)">Next</button>
+                                    </div>
+                                    <p class="form-note">Why do we ask?<br>This information helps local professionals to provide you with the most accurate quote.</p>
+                                </div>
+
+                                <!-- Step 3: Material Selection -->
+                                <div class="form-step" id="step3">
+                                    <h2 class="step-title">What Material do you require on your roof?</h2>
+                                    <div class="option-grid">
+                                        <div class="option-card" onclick="selectOption('material', 'asphalt')">
+                                            <div class="option-icon">
+                                                <img src="https://homezies.com/wp-content/uploads/2025/11/Asphalt.png" alt="Asphalt">
+                                            </div>
+                                            <div class="option-label">Asphalt</div>
+                                            <input type="radio" name="material" value="asphalt" id="material-asphalt" required>
+                                        </div>
+                                        <div class="option-card" onclick="selectOption('material', 'clay')">
+                                            <div class="option-icon">
+                                                <img src="https://homezies.com/wp-content/uploads/2025/11/Clay.png" alt="Clay">
+                                            </div>
+                                            <div class="option-label">Clay</div>
+                                            <input type="radio" name="material" value="clay" id="material-clay" required>
+                                        </div>
+                                        <div class="option-card" onclick="selectOption('material', 'slate')">
+                                            <div class="option-icon">
+                                                <img src="https://homezies.com/wp-content/uploads/2025/11/Slate.png" alt="Slate">
+                                            </div>
+                                            <div class="option-label">Slate</div>
+                                            <input type="radio" name="material" value="slate" id="material-slate" required>
+                                        </div>
+                                        <div class="option-card" onclick="selectOption('material', 'wood')">
+                                            <div class="option-icon">
+                                                <img src="https://homezies.com/wp-content/uploads/2025/11/Wood.png" alt="Wood">
+                                            </div>
+                                            <div class="option-label">Wood</div>
+                                            <input type="radio" name="material" value="wood" id="material-wood" required>
+                                        </div>
+                                        <div class="option-card" onclick="selectOption('material', 'metal')">
+                                            <div class="option-icon">
+                                                <img src="https://homezies.com/wp-content/uploads/2025/11/Metal.png" alt="Metal">
+                                            </div>
+                                            <div class="option-label">Metal</div>
+                                            <input type="radio" name="material" value="metal" id="material-metal" required>
+                                        </div>
+                                        <div class="option-card" onclick="selectOption('material', 'others')">
+                                            <div class="option-icon">
+                                                <img src="https://homezies.com/wp-content/uploads/2025/06/Im-not-sure.png" alt="Others">
+                                            </div>
+                                            <div class="option-label">Others</div>
+                                            <input type="radio" name="material" value="others" id="material-others" required>
+                                        </div>
+                                    </div>
+                                    <div class="step-navigation">
+                                        <button type="button" class="btn-secondary" onclick="prevStep(3)">Back</button>
+                                        <button type="button" class="btn-primary" onclick="nextStep(3)">Next</button>
+                                    </div>
+                                    <p class="form-note">Why do we ask?<br>This information helps local professionals to provide you with the most accurate quote.</p>
+                                </div>
+
+                                <!-- Step 4: Timeline -->
+                                <div class="form-step" id="step4">
+                                    <h2 class="step-title">How soon would you like to start this project?</h2>
+                                    <p class="step-subtitle">Choose the timeline for this project.</p>
+                                    <div class="option-list">
+                                        <div class="option-item" onclick="selectOption('timeline', '1week')">
+                                            <div class="option-label">Within 1 Week</div>
+                                            <input type="radio" name="timeline" value="1week" id="timeline-1week" required>
+                                        </div>
+                                        <div class="option-item" onclick="selectOption('timeline', '2-3weeks')">
+                                            <div class="option-label">Within 2-3 Weeks</div>
+                                            <input type="radio" name="timeline" value="2-3weeks" id="timeline-2-3weeks" required>
+                                        </div>
+                                        <div class="option-item" onclick="selectOption('timeline', '1month')">
+                                            <div class="option-label">Within a Month</div>
+                                            <input type="radio" name="timeline" value="1month" id="timeline-1month" required>
+                                        </div>
+                                    </div>
+                                    <div class="step-navigation">
+                                        <button type="button" class="btn-secondary" onclick="prevStep(4)">Back</button>
+                                        <button type="button" class="btn-primary" onclick="nextStep(4)">Next</button>
+                                    </div>
+                                    <p class="form-note">Why do we ask?<br>This information helps the contractor understand the urgency and timeline of the project.</p>
+                                </div>
+
+                                <!-- Step 5: Homeowner -->
+                                <div class="form-step" id="step5">
+                                    <h2 class="step-title">Are you a Homeowner?</h2>
+                                    <p class="step-subtitle">Are you the owner or authorized to make changes to it.</p>
+                                    <div class="option-grid">
+                                        <div class="option-card" onclick="selectOption('homeowner', 'yes')">
+                                            <div class="option-icon">
+                                                <img src="https://homezies.com/wp-content/uploads/2025/11/Yes-removebg-preview.png" alt="Yes">
+                                            </div>
+                                            <div class="option-label">Yes</div>
+                                            <input type="radio" name="homeowner" value="yes" id="homeowner-yes" required>
+                                        </div>
+                                        <div class="option-card" onclick="selectOption('homeowner', 'no')">
+                                            <div class="option-icon">
+                                                <img src="https://homezies.com/wp-content/uploads/2025/11/No-removebg-preview.png" alt="No">
+                                            </div>
+                                            <div class="option-label">No</div>
+                                            <input type="radio" name="homeowner" value="no" id="homeowner-no" required>
+                                        </div>
+                                    </div>
+                                    <div class="step-navigation">
+                                        <button type="button" class="btn-secondary" onclick="prevStep(5)">Back</button>
+                                        <button type="button" class="btn-primary" onclick="nextStep(5)">Next</button>
+                                    </div>
+                                    <p class="form-note">Why do we ask?<br>This information helps the professional know if you're the homeowner for this project.</p>
+                                </div>
+
+                                <!-- Step 6: Location -->
+                                <div class="form-step" id="step6">
+                                    <h2 class="step-title">Where will this project take place?</h2>
+                                    <div class="form-group">
+                                        <label for="city">City</label>
+                                        <input type="text" id="city" name="city" placeholder="Enter your city" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="state">State</label>
+                                        <input type="text" id="state" name="state" placeholder="Enter your state" required>
+                                    </div>
+                                    <div class="step-navigation">
+                                        <button type="button" class="btn-secondary" onclick="prevStep(6)">Back</button>
+                                        <button type="button" class="btn-primary" onclick="nextStep(6)">Next</button>
+                                    </div>
+                                    <p class="form-note">Why do we ask?<br>Your address helps the contractor of where the project will take place.</p>
+                                </div>
+
+                                <!-- Step 7: Contact Name -->
+                                <div class="form-step" id="step7">
+                                    <h2 class="step-title">Who should we contact?</h2>
+                                    <p class="step-subtitle">Enter your name or representative for this project.</p>
+                                    <div class="form-group">
+                                        <label for="firstName">First Name</label>
+                                        <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lastName">Last Name</label>
+                                        <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+                                    </div>
+                                    <div class="step-navigation">
+                                        <button type="button" class="btn-secondary" onclick="prevStep(7)">Back</button>
+                                        <button type="button" class="btn-primary" onclick="nextStep(7)">Next</button>
+                                    </div>
+                                    <p class="form-note">Why do we ask?<br>This let's the contractor know who they're contacting for this project.</p>
+                                </div>
+
+                                <!-- Step 8: Final Contact Info -->
+                                <div class="form-step" id="step8">
+                                    <h2 class="step-title">Almost Done!</h2>
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                                        <span class="error-message" id="emailError"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone">Phone</label>
+                                        <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required>
+                                        <span class="error-message" id="phoneError"></span>
+                                    </div>
+                                    <div class="form-group checkbox-group">
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" id="terms" name="terms" required>
+                                            <span>By submitting this request, I agree to Homezies' Terms of Use & Privacy Policy and authorize home improvement and marketing companies, their contractors, and partners (our partners list), to send me offers via email as well as phone and text messages at the provided number. I agree to be contacted by the mentioned groups even if my contacts are registered in the "Do Not Call" lists. I agree that these marketing communications may be delivered to me with an automatic telephone dialing system or pre-recorded messages. I understand that my consent is not a purchase condition and that I may revoke it at any time. California Notice.</span>
+                                        </label>
+                                    </div>
+                                    <div class="step-navigation">
+                                        <button type="button" class="btn-secondary" onclick="prevStep(8)">Back</button>
+                                        <button type="submit" class="btn-primary">Submit</button>
+                                    </div>
+                                    <p class="form-note">Why do we ask?<br>This lets the contractor know how best to contact you.</p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="how-it-works">
+            <div class="container">
+                <h2 class="section-title">How The Process Works</h2>
+                <h3 class="section-subtitle">Revamp Your Roof The Right Way</h3>
+                
+                <!-- Step-by-Step Process -->
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <div class="step-icon">📝</div>
+                        <h4 class="step-heading">Fill Out Our Simple Form</h4>
+                        <p class="step-description">Tell us about your roofing remodeling project by completing our quick and easy form. It only takes a few minutes!</p>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <div class="step-icon">🔍</div>
+                        <h4 class="step-heading">We Match You With Local Pros</h4>
+                        <p class="step-description">We connect you with up to 4 pre-screened, licensed roofing remodeling contractors in your area.</p>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <div class="step-icon">📞</div>
+                        <h4 class="step-heading">Get Free Quotes</h4>
+                        <p class="step-description">Local contractors will contact you to schedule a consultation and provide you with a free, no-obligation estimate.</p>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <div class="step-icon">✅</div>
+                        <h4 class="step-heading">Compare & Choose</h4>
+                        <p class="step-description">Review multiple quotes, compare services, and choose the contractor that best fits your needs and budget.</p>
+                    </div>
+                </div>
+
+                <div class="content-text">
+                    <h3 style="font-size: 24px; font-weight: 700; color: var(--dark-green); margin-bottom: 20px; text-align: center;">Discover Local Roofing Companies & Special Offers</h3>
+                    <p>Are you in search of the finest deals for your home roofing project? Look no further! At Homezies, we simplify the process of finding roofing companies in your nearby area. With a single request, we can supply you with multiple quotes, ensuring you secure the top deal for your roofing project. <strong>Complete the form above to get your free roof quotes today!</strong></p>
+                </div>
+
+                <div class="cta-button">
+                    <a href="#main-content" class="btn-secondary">Start Your Roof Project</a>
+                </div>
+
+                <div class="info-sections">
+                    <div class="info-section">
+                        <div class="info-section-content">
+                            <div class="info-icon">
+                                <img src="https://homezies.com/wp-content/uploads/2025/11/Inspect.png" alt="Roof Inspection">
+                            </div>
+                            <div class="info-text">
+                                <h4>When Did You Last Inspect Your Roof?</h4>
+                                <p>If you're similar to most homeowners, you might not have ventured onto your roof or gained much insight into its condition. The assumption often is that if there's no visible issue during dry weather, everything is fine. However, this line of thinking can be problematic because by the time you recognize potential roof issues, you could already be facing costly water damage. We make it easy to schedule an inspection. Get your instant roof estimate today!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-section">
+                        <div class="info-section-content">
+                            <div class="info-icon">
+                                <img src="https://homezies.com/wp-content/uploads/2025/11/Schedule.png" alt="Schedule Inspection">
+                            </div>
+                            <div class="info-text">
+                                <h4>Regularly Schedule Roof Inspections with a Professional Contractor</h4>
+                                <p>The age-old saying is that "an ounce of prevention is worth a pound of cure." A skilled roofing contractor can dedicate an hour each year to address minor issues on your roof, preventing potentially costly interior damage to your home. Additionally, they can offer valuable insights on when to prepare for a new roof and assist you in selecting from the various roofing materials available today. If you're planning a complete roof renovation, be sure to plan ahead and let your neighbors know about construction company vehicles parking on the streets!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-section">
+                        <div class="info-section-content">
+                            <div class="info-icon">
+                                <img src="https://homezies.com/wp-content/uploads/2025/11/Selecting.png" alt="Selecting Roofing Materials">
+                            </div>
+                            <div class="info-text">
+                                <h4>Selecting The Various Types of Roofing Materials</h4>
+                                <p>When it's time to invest in a new roof, your choice of roofing material can completely transform the look of your home. Opting for standing seam metal can evoke an antique charm that harmonizes well with New England or Colonial Williamsburg aesthetics. Metal shingles can impart a contemporary and sleek appearance, while cedar shakes can give your home a rustic and cozy feel, or at least create that illusion. For those who appreciate Southwestern design, roof tiles may be a consideration, depending on your climate.</p>
+                                <p style="margin-top: 15px;">Slate, a classic roofing material used for centuries, offers an elegant and timeless appearance that's hard to surpass. However, when assessing roofing material options, don't overlook asphalt shingles simply because you desire something less conventional. Modern asphalt shingles come in a variety of styles, colors, and thicknesses, and many are cost-effective.</p>
+                                <p style="margin-top: 15px;">Furthermore, you can enhance your home's energy efficiency through your roofing material selection. Certain shingles and metal products are designed to reflect sunlight, reducing your summer cooling costs. It's also worth consulting your roofing contractor about environmentally friendly options, such as synthetic slate and aluminum. Just fill out the form above and we will connect you with a local roofing contractor. They will schedule a time to come by, run an assessment, and give you a free roof estimate if its time for a new roof! There are no obligations.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-section">
+                        <div class="info-section-content">
+                            <div class="info-icon">
+                                <img src="https://homezies.com/wp-content/uploads/2025/11/Pricing.png" alt="Roofing Pricing">
+                            </div>
+                            <div class="info-text">
+                                <h4>Pricing for a Roof Installation</h4>
+                                <p>The expenses associated with installing a new roof can vary significantly, contingent upon your home's size, style, and the materials you're contemplating. For a standard home, asphalt shingles typically offer the most budget-friendly choice, with costs starting around $160 per roofing square (this is not a normal "square foot"), covering both materials and installation. On the other hand, selecting slate can place you at the upper end of the price range, potentially exceeding $800 per square for a new roof installation.</p>
+                                <p style="margin-top: 15px;">The encouraging news is that you might have the opportunity to recoup a portion of your new roof expenses. According to Remodeling Magazine's "Cost vs. Value Survey" for 2010, homeowners, on average, could potentially recover approximately 60 percent of their new roof costs when selling their home. It's worth noting that this percentage can vary depending on your home's location.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-button">
+                    <a href="#main-content" class="btn-secondary">Free Roof Estimate</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest Projects Section -->
+        <section id="latest-projects" class="latest-projects">
+            <div class="container">
+                <h2 class="section-title">Check Out Our Latest Projects!</h2>
+                <div class="projects-slider">
+                    <div class="slider-container">
+                        <div class="slider-track">
+                            <div class="project-slide active">
+                                <div class="project-image">
+                                    <img src="https://homezies.com/wp-content/uploads/2025/03/architecture-3320462_1280.jpg" alt="Professional Roofing Architecture">
+                                </div>
+                                <div class="project-overlay">
+                                    <h3>Professional Roofing Architecture</h3>
+                                    <p>Expert roofing solutions with architectural excellence and quality craftsmanship</p>
+                                </div>
+                            </div>
+                            <div class="project-slide">
+                                <div class="project-image">
+                                    <img src="https://homezies.com/wp-content/uploads/2025/03/roofers-2891664_1280.jpg" alt="Expert Roofing Installation">
+                                </div>
+                                <div class="project-overlay">
+                                    <h3>Expert Roofing Installation</h3>
+                                    <p>Professional roofers delivering quality installation and superior protection</p>
+                                </div>
+                            </div>
+                            <div class="project-slide">
+                                <div class="project-image">
+                                    <img src="https://homezies.com/wp-content/uploads/2025/05/vertical-low-angle-closeup-shot-black-roof-building_181624-10654.webp" alt="Modern Black Roof Design">
+                                </div>
+                                <div class="project-overlay">
+                                    <h3>Modern Black Roof Design</h3>
+                                    <p>Sleek contemporary roofing with premium materials and modern aesthetics</p>
+                                </div>
+                            </div>
+                            <div class="project-slide">
+                                <div class="project-image">
+                                    <img src="https://homezies.com/wp-content/uploads/2025/05/cottage-768889_1280-1.webp" alt="Charming Cottage Roofing">
+                                </div>
+                                <div class="project-overlay">
+                                    <h3>Charming Cottage Roofing</h3>
+                                    <p>Classic cottage-style roofing with traditional charm and durability</p>
+                                </div>
+                            </div>
+                            <div class="project-slide">
+                                <div class="project-image">
+                                    <img src="https://homezies.com/wp-content/uploads/2025/04/maxresdefault-2.jpg" alt="Quality Roofing Solutions">
+                                </div>
+                                <div class="project-overlay">
+                                    <h3>Quality Roofing Solutions</h3>
+                                    <p>Comprehensive roofing services with expert installation and lasting protection</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="slider-btn slider-prev" onclick="moveSlide(-1)">❮</button>
+                    <button class="slider-btn slider-next" onclick="moveSlide(1)">❯</button>
+                    <div class="slider-dots">
+                        <span class="dot active" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                        <span class="dot" onclick="currentSlide(5)"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Articles Section -->
+        <section id="articles" class="articles">
+            <div class="container">
+                <div class="articles-header">
+                    <h2 class="section-title">HOME VALUE, RESEARCH AND PLANNING, EXTERIOR, INSPIRATION</h2>
+                </div>
+                
+                <div class="articles-grid">
+                    <article class="article-card">
+                        <div class="article-category">Uncategorized</div>
+                        <h3 class="article-title">What is the Best Roof Underlayment? Understanding Underlayment Types</h3>
+                        <div class="article-meta">
+                            <span class="article-date">November 21, 2025</span>
+                            <span class="article-author">Svetlana L.</span>
+                        </div>
+                        <p class="article-excerpt">When most homeowners think about replacing their roof, they focus on shingles — color, brand, durability, warranty. But beneath the shingles lies the hardworking, hidden layer that truly protects your home: roof underlayment. This layer sits directly on the roof…</p>
+                        <a href="#" class="article-link">Read more</a>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-category">Roofing</div>
+                        <h3 class="article-title">Roof Drip Edge 101: Is It Needed for an Asphalt Shingle Roof?</h3>
+                        <div class="article-meta">
+                            <span class="article-date">November 20, 2025</span>
+                            <span class="article-author">Svetlana L.</span>
+                        </div>
+                        <p class="article-excerpt">When homeowners think about replacing a roof, they often focus on shingles, underlayment, or ventilation. But one of the smallest pieces of metal on your roof—your drip edge—plays one of the biggest roles in protecting your home from water damage.…</p>
+                        <a href="#" class="article-link">Read more</a>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-category">Roofing</div>
+                        <h3 class="article-title">7 Mistakes That Can Void Your Roof Warranty & How to Avoid These Errors</h3>
+                        <div class="article-meta">
+                            <span class="article-date">November 19, 2025</span>
+                            <span class="article-author">Svetlana L.</span>
+                        </div>
+                        <p class="article-excerpt">A roof warranty gives homeowners peace of mind by protecting your roof from workmanship issues, material defects, and damage caused by improper installation. But what many homeowners don't realize is this: very silly mistakes can easily void your roof warranty.…</p>
+                        <a href="#" class="article-link">Read more</a>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-category">Roofing</div>
+                        <h3 class="article-title">Everything You Need to Know About Roof Flashing—What Type of Roof Flashing Do I Need?</h3>
+                        <div class="article-meta">
+                            <span class="article-date">November 18, 2025</span>
+                            <span class="article-author">Svetlana L.</span>
+                        </div>
+                        <p class="article-excerpt">When it comes to protecting your home from leaks, roof flashing is one of the most important roofing components—yet it's also one of the least understood. Many homeowners don't truly know about roof flashing until something goes wrong. But flashing…</p>
+                        <a href="#" class="article-link">Read more</a>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-category">Roofing</div>
+                        <h3 class="article-title">What to Expect During Your Roof Installation Process</h3>
+                        <div class="article-meta">
+                            <span class="article-date">November 17, 2025</span>
+                            <span class="article-author">Svetlana L.</span>
+                        </div>
+                        <p class="article-excerpt">Getting a new roof is one of the biggest home improvement projects you'll ever take on—and one of the best ways to protect your home, boost curb appeal, and prevent long-term water damage. But if you're a homeowner preparing for…</p>
+                        <a href="#" class="article-link">Read more</a>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-category">Roofing</div>
+                        <h3 class="article-title">What Every Homeowner Must Know About Proper Roof Ventilation</h3>
+                        <div class="article-meta">
+                            <span class="article-date">November 14, 2025</span>
+                            <span class="article-author">Svetlana L.</span>
+                        </div>
+                        <p class="article-excerpt">Proper roof ventilation is one of the most overlooked parts of home maintenance—yet it has a bigger impact on your roof, attic, and overall energy efficiency than almost anything else. Without the right roof vents, heat and moisture get trapped…</p>
+                        <a href="#" class="article-link">Read more</a>
+                    </article>
+                </div>
+
+                <div class="see-more">
+                    <a href="#" class="see-more-link">See More Articles</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <!-- Upper Footer Section (Light Gray Background) -->
+        <div class="footer-content-wrapper">
+            <div class="container">
+                <div class="footer-content">
+                    <!-- Newsletter Signup -->
+                    <div class="footer-section footer-newsletter">
+                        <h3>Sign Up for Smart Home Updates</h3>
+                        <p>Get expert home improvement guides and cost-saving advice right in your inbox.</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Email" required>
+                            <button type="submit" class="newsletter-btn">JOIN FREE NEWSLETTER</button>
+                        </form>
+                    </div>
+                    
+                    <!-- Useful Links -->
+                    <div class="footer-section footer-useful-links">
+                        <h3>Useful Links</h3>
+                        <ul>
+                            <li><a href="#">Solar</a></li>
+                            <li><a href="#">Roofing</a></li>
+                            <li><a href="#">Windows</a></li>
+                            <li><a href="#">Plumbing</a></li>
+                            <li><a href="#">Gutters</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Project Planning & Estimate -->
+                    <div class="footer-section footer-project-planning">
+                        <h3>Project Planning</h3>
+                        <ul>
+                            <li><a href="#">Interior</a></li>
+                            <li><a href="#">Exterior</a></li>
+                            <li><a href="#">Other</a></li>
+                        </ul>
+                        <h3 class="footer-subsection-title">Estimate Project Cost</h3>
+                        <ul>
+                            <li><a href="#">Cost Calculators</a></li>
+                            <li><a href="#">Cost Guides</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Home Owner Tools & Support -->
+                    <div class="footer-section footer-tools-support">
+                        <h3>Home Owner Tools</h3>
+                        <ul>
+                            <li><a href="#">Home Owner Insights</a></li>
+                        </ul>
+                        <h3 class="footer-subsection-title">Support</h3>
+                        <ul>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                        <p>General Inquiries:<br><a href="mailto:chris@homezies.com">chris@homezies.com</a></p>
+                    </div>
+                </div>
+                
+                <!-- Bottom Row: Logo, Legal, Social -->
+                <div class="footer-bottom-row">
+                    <div class="footer-branding">
+                        <a href="https://homezies.com/" class="footer-logo-link">
+                            <img src="https://homezies.com/wp-content/uploads/2025/05/logo-v2-160x28.webp" alt="Homezies Logo" class="footer-logo-image">
+                        </a>
+                        <p>67 West Street,<br>Brooklyn, NY 11222<br><a href="tel:2016879276">(201) 687-9276</a><br>&copy; 2025 Homezies</p>
+                    </div>
+                    
+                    <div class="footer-legal-links">
+                        <p>
+                            <a href="https://homezies.com/privacy-notice/">Privacy Notice</a> | 
+                            <a href="https://homezies.com/terms-of-use/">Terms of Use</a> | 
+                            <a href="https://homezies.com/e-sign-consent-disclosure/">E-Sign Consent</a>
+                        </p>
+                        <p>
+                            This site is protected by reCAPTCHA and the Google 
+                            <a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer noopener">Privacy Policy</a> and 
+                            <a href="https://policies.google.com/terms" target="_blank" rel="noreferrer noopener">Terms of Service</a> apply.
+                        </p>
+                    </div>
+                    
+                    <div class="footer-social-icons">
+                        <a href="https://www.facebook.com/share/19Xq7Q9ehU/?mibextid=wwXIfr" aria-label="Facebook" target="_blank" rel="noopener noreferrer" class="footer-social-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="20" height="20">
+                                <path fill="currentColor" d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/company/homeziesusa/" aria-label="Linkedin" target="_blank" rel="noopener noreferrer" class="footer-social-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="20" height="20">
+                                <path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/homeziesofficial/" aria-label="Instagram" target="_blank" rel="noopener noreferrer" class="footer-social-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="20" height="20">
+                                <path fill="currentColor" d="M224,202.66A53.34,53.34,0,1,0,277.36,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54,54,0,0,0-30.41-30.41c-21-8.29-71-6.43-94.3-6.43s-73.25-1.93-94.31,6.43a54,54,0,0,0-30.41,30.41c-8.28,21-6.43,71.05-6.43,94.33S91,329.26,99.32,350.33a54,54,0,0,0,30.41,30.41c21,8.29,71,6.43,94.31,6.43s73.24,1.93,94.3-6.43a54,54,0,0,0,30.41-30.41c8.35-21,6.43-71.05,6.43-94.33S357.1,182.74,348.75,161.67ZM224,338a82,82,0,1,1,82-82A81.9,81.9,0,0,1,224,338Zm85.38-148.3a19.14,19.14,0,1,1,19.13-19.14A19.1,19.1,0,0,1,309.42,189.74ZM400,32H48A48,48,0,0,0,0,80V432a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V80A48,48,0,0,0,400,32ZM382.88,322c-1.29,25.63-7.14,48.34-25.85,67s-41.4,24.63-67,25.85c-26.41,1.49-105.59,1.49-132,0-25.63-1.29-48.26-7.15-67-25.85s-24.63-41.42-25.85-67c-1.49-26.42-1.49-105.61,0-132,1.29-25.63,7.07-48.34,25.85-67s41.47-24.56,67-25.78c26.41-1.49,105.59-1.49,132,0,25.63,1.29,48.33,7.15,67,25.85s24.63,41.42,25.85,67.05C384.37,216.44,384.37,295.56,382.88,322Z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com/@Homeziesofficial" aria-label="YouTube" target="_blank" rel="noopener noreferrer" class="footer-social-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="20" height="20">
+                                <path fill="currentColor" d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom Footer Section (Dark Green Background) -->
+        <div class="footer-disclaimer-section">
+            <div class="container">
+                <p>Homezies.com is a free service to assist homeowners in connecting with local service providers. All contractors/providers are independent and Home does not warrant or guarantee any work performed. It is the responsibility of the homeowner to verify that the hired contractor furnishes the necessary license and insurance required for the work being performed. All persons depicted in a photo or video are actors or models and not contractors listed on homezies.com.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
