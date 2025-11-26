@@ -396,3 +396,37 @@ window.moveSlide = function(direction) {
 window.currentSlide = function(index) {
     showSlide(index - 1);
 };
+
+// Read More functionality for info sections
+document.addEventListener('DOMContentLoaded', function() {
+    const readMoreButtons = document.querySelectorAll('.info-read-more-btn');
+    
+    readMoreButtons.forEach(button => {
+        // Check if content actually needs truncation
+        const contentContainer = button.previousElementSibling;
+        const contentHeight = contentContainer.scrollHeight;
+        const lineHeight = parseInt(window.getComputedStyle(contentContainer).lineHeight);
+        const maxHeight = lineHeight * 4; // 4 lines
+        
+        // Only show button if content is longer than 4 lines
+        if (contentHeight > maxHeight) {
+            button.style.display = 'inline-flex';
+        } else {
+            button.style.display = 'none';
+        }
+        
+        button.addEventListener('click', function() {
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            
+            if (isExpanded) {
+                // Collapse
+                this.setAttribute('aria-expanded', 'false');
+                contentContainer.classList.remove('expanded');
+            } else {
+                // Expand
+                this.setAttribute('aria-expanded', 'true');
+                contentContainer.classList.add('expanded');
+            }
+        });
+    });
+});
